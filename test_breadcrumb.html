@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Breadcrumb</title>
+    <style>
+        .breadcrumb-container {
+            padding: 8px 16px;
+            background-color: #333;
+        }
+        
+        .breadcrumb-items {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .breadcrumb-item {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #dbd2d2ff;
+        }
+        
+        .breadcrumb-item.current {
+            color: white;
+            font-weight: 500;
+        }
+        
+        .separator {
+            color: #999;
+            font-size: 18px;
+        }
+        
+        .label {
+            color: white;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <h1>Test Breadcrumb</h1>
+    
+    <h2>Cas 1: Un seul élément (Accueil) - doit être courant</h2>
+    <nav class="breadcrumb-container">
+        <div class="breadcrumb-items">
+            <span class="breadcrumb-item current">
+                <span>Accueil</span>
+            </span>
+        </div>
+    </nav>
+    
+    <h2>Cas 2: Plusieurs éléments - seul "Vue d'ensemble" doit être courant</h2>
+    <nav class="breadcrumb-container">
+        <div class="breadcrumb-items">
+            <a class="breadcrumb-item">
+                <span>Accueil</span>
+            </a>
+            <span class="separator">></span>
+            <span class="breadcrumb-item current">
+                <span>Vue d'ensemble</span>
+            </span>
+            <span class="separator">></span>
+            <a class="breadcrumb-item">
+                <span>Questionner</span>
+            </a>
+            <span class="separator">></span>
+            <a class="breadcrumb-item">
+                <span>Diffuser</span>
+            </a>
+        </div>
+    </nav>
+    
+    <h2>Cas 3: Élément sans chemin - doit être courant</h2>
+    <nav class="breadcrumb-container">
+        <div class="breadcrumb-items">
+            <a class="breadcrumb-item">
+                <span>Accueil</span>
+            </a>
+            <span class="separator">></span>
+            <span class="breadcrumb-item current">
+                <span>Page actuelle</span>
+            </span>
+        </div>
+    </nav>
+</body>
+</html>

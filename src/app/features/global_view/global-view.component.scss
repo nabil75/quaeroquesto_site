@@ -1,0 +1,179 @@
+
+#titre {
+  background: linear-gradient(135deg,#c8f4e5, #b8e6d3 100%) !important;
+  margin-top: 1%;
+  padding: 16px 24px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  font-weight: 600;
+  color: var(--text-primary);
+  transition: var(--transition);
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
+}
+
+.vue-ensemble-layout {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 32px;
+  align-items: center;
+}
+
+.title-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.description-vue-globale {
+  font-weight: 400;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  font-size: 22px;
+  margin: 0;
+  text-align: justify;
+  padding: 10px;
+}
+
+.progress-integrated {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 20px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 14px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  height: 100%;
+  min-height: 280px;
+}
+
+@media (max-width: 992px) {
+  .vue-ensemble-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .progress-integrated {
+    min-height: auto;
+  }
+}
+
+.bg-section-one {
+  background: linear-gradient(135deg, var(--primary-gradient-start) 0%, var(--primary-gradient-end) 100%) !important;
+  color: white;
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+  
+  &:hover {
+    box-shadow: var(--shadow-lg);
+  }
+}
+
+.bg-section-two {
+  background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%) !important;
+  color: var(--text-primary);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  
+  &:hover {
+    box-shadow: var(--shadow-md);
+  }
+}
+
+.progress-title {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 16px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  transition: var(--transition);
+  
+  // Texte avec dégradé
+  background-image: linear-gradient(135deg, var(--primary-gradient-start) 0%, var(--primary-gradient-end) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.progress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(135deg, #c8f4e5, #b8e6d3 100%);
+  border-radius: 50%;
+  color: var(--text-primary);
+  font-size: 42px;
+  font-weight: bolder;
+  position: relative;
+  overflow: visible;
+  box-shadow: var(--shadow-lg);
+  transition: var(--transition);
+  
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 35px rgba(102, 126, 234, 0.3);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    border-radius: 50%;
+    border: 6px solid transparent;
+    border-top-color: var(--primary-gradient-start);
+    border-right-color: var(--primary-gradient-end);
+    animation: spinAndComplete 2s linear forwards;
+  }
+}
+
+@keyframes spinAndComplete {
+  0% {
+    transform: rotate(0deg);
+    border-top-color: var(--primary-gradient-start);
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  25% {
+    border-top-color: var(--primary-gradient-start);
+    border-right-color: var(--primary-gradient-end);
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  50% {
+    border-top-color: var(--primary-gradient-start);
+    border-right-color: var(--primary-gradient-end);
+    border-bottom-color: var(--primary-gradient-end);
+    border-left-color: transparent;
+  }
+  75% {
+    border-top-color: var(--primary-gradient-start);
+    border-right-color: var(--primary-gradient-end);
+    border-bottom-color: var(--primary-gradient-end);
+    border-left-color: var(--primary-gradient-start);
+  }
+  100% {
+    transform: rotate(360deg);
+    border-top-color: var(--primary-gradient-start);
+    border-right-color: var(--primary-gradient-end);
+    border-bottom-color: var(--primary-gradient-end);
+    border-left-color: var(--primary-gradient-start);
+  }
+}
+        

@@ -1,0 +1,41 @@
+<app-breadcrumb [item_breadcrumb]="item_breadcrumb"></app-breadcrumb>
+
+<div class="container py-4">
+
+    <div class="logo-header">
+      <img
+        src="assets/images/logo_quaeroquesto.png"
+        alt="QuaeroQuesto Logo"
+        class="logo-small"
+      />
+    </div>
+
+    <h3 class="baseline">
+      La plateforme intelligente de création, diffusion et analyse de
+      questionnaires en ligne
+    </h3>
+
+
+  <div class="modules-grid">
+    @for (module of modules; track module.id) {
+      <a [routerLink]="module.route" 
+         class="module-card" 
+         [class.text-dark]="module.textDark"
+         [style.background]="module.color">
+        <div class="module-icon">
+          <mat-icon>{{ module.icon }}</mat-icon>
+        </div>
+        <h3 class="module-title">{{ module.title }}</h3>
+        <p class="module-description">{{ module.description }}</p>
+        <div class="module-arrow">
+          <mat-icon>arrow_forward</mat-icon>
+        </div>
+      </a>
+    }
+  </div>
+</div>
+
+
+
+
+
