@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/app.component.scss"],
+  "sourcesContent": ["    .toolbar {\r\n        position: fixed;\r\n        top: 0;\r\n        left: 0;\r\n        right: 0;\r\n        background-color: #005CA3;\r\n        color: white;\r\n    }\r\n"],
+  "mappings": ";AAAI,CAAA;AACI,YAAA;AACA,OAAA;AACA,QAAA;AACA,SAAA;AACA,oBAAA;AACA,SAAA;;",
+  "names": []
+}
