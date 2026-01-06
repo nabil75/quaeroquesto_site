@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["src/app/shared/breadcrumb/breadcrumb.component.ts"],
-  "sourcesContent": ["\n    .breadcrumb-container {\n      padding: 8px 16px;\n    }\n    \n    .breadcrumb-items {\n      display: flex;\n      align-items: center;\n      gap: 8px;\n    }\n    \n    .breadcrumb-item {\n      display: flex;\n      align-items: center;\n      gap: 4px;\n      text-decoration: none;\n      font-size: 18px;\n      color: #dbd2d2ff;\n    }\n    \n    .breadcrumb-item.current {\n      color: white;\n      font-weight: 500;\n    }\n    \n    .separator {\n      color: #999;\n      font-size: 18px;\n    }\n\n    .label{\n      color: white;\n      font-weight: 500;\n    }\n    \n    mat-icon {\n      font-size: 18px;\n      width: 18px;\n      height: 18px;\n    }\n    "],
-  "mappings": ";AACI,CAAA;AACE,WAAA,IAAA;;AAGF,CAAA;AACE,WAAA;AACA,eAAA;AACA,OAAA;;AAGF,CAAA;AACE,WAAA;AACA,eAAA;AACA,OAAA;AACA,mBAAA;AACA,aAAA;AACA,SAAA;;AAGF,CATA,eASA,CAAA;AACE,SAAA;AACA,eAAA;;AAGF,CAAA;AACE,SAAA;AACA,aAAA;;AAGF,CAAA;AACE,SAAA;AACA,eAAA;;AAGF;AACE,aAAA;AACA,SAAA;AACA,UAAA;;",
-  "names": []
-}
