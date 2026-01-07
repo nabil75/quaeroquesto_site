@@ -1,14 +1,17 @@
 body {
   background: linear-gradient(135deg, var(--background-light) 0%, #e0e7ff 100%);
   min-height: 100vh;
-  height: calc(100vh - 64px);
   position: relative;
   overflow-x: hidden;
+  background-attachment: fixed;
 }
 
 
 body > div {
   position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .toolbox {

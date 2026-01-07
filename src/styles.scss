@@ -37,6 +37,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Conteneur de page uniforme pour toutes les routes */
+.page-container {
+  min-height: calc(100vh - 2rem);
+  padding-bottom: 2rem;
+}
+
+/* Uniformise les conteneurs Bootstrap utilisés dans les pages de modules et global_view */
+app-breadcrumb + .container {
+  min-height: calc(100vh - 4rem);
+}
+
 /* Animations */
 @keyframes fadeIn {
   from {

@@ -2,7 +2,10 @@
   max-width: 800px;
   margin: 2rem auto;
   padding: 0 1rem;
-  min-height: calc(89.5vh);
+  min-height: calc(100vh - 4rem);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .contact-card {
