@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { NavigationHistoryService} from './../navigation-history.service'
 
 export interface BreadcrumbItem {
   label: string;
@@ -25,7 +26,7 @@ export class BreadcrumbComponent implements OnInit {
    
   items: BreadcrumbItem[] = [];
 
-  constructor() {}
+  constructor( private navigationHistory : NavigationHistoryService) {}
 
   ngOnInit(): void {
 
@@ -39,5 +40,9 @@ export class BreadcrumbComponent implements OnInit {
                     { label: 'Partager', path: '/module5', icon: 'share' }
                   ];
 
+  }
+
+  getUrl(url : any){
+    this.navigationHistory.setPreviousUrl(url)
   }
 }

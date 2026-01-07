@@ -9,7 +9,7 @@
           <span>{{ item.label }}</span>
         </a>
       } @else {
-        <a [routerLink]="item.path" class="breadcrumb-item">
+        <a [routerLink]="item.path" class="breadcrumb-item" (click)="getUrl(item.path)">
           @if (item.icon) {
             <mat-icon>{{ item.icon }}</mat-icon>
           }

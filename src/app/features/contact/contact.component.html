@@ -1,0 +1,32 @@
+<app-breadcrumb [item_breadcrumb]="item_breadcrumb"></app-breadcrumb>
+
+<div class="contact-container">
+  <mat-card class="contact-card">
+    <div class="contact-header">
+      <div class="contact-title">
+        <mat-icon>contact_mail</mat-icon>
+        <h2>Contact</h2>
+      </div>
+      <button mat-icon-button (click)="closeContact()" aria-label="Fermer la fiche contact">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+
+    <mat-card-content>
+      <p class="contact-text">
+        Vous pouvez me contacter à tout moment par email ou par téléphone.
+      </p>
+
+      <div class="contact-item">
+        <mat-icon class="contact-icon">email</mat-icon>
+        <a class="contact-link" [href]="'mailto:' + email">{{ email }}</a>
+      </div>
+
+      <div class="contact-item">
+        <mat-icon class="contact-icon">phone</mat-icon>
+        <a class="contact-link" [href]="'tel:' + phone">{{ phone }}</a>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+
