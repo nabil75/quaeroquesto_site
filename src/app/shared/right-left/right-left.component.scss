@@ -1,0 +1,22 @@
+
+
+.icon {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  font-size: 96px;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  color: #667eea;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.icon.left {
+  left: -70px;
+}
+
+.icon.right {
+  right: -70px;
+}

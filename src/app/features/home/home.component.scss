@@ -11,6 +11,10 @@
   width: 95%;
 }
 
+.container-relative {
+  position: relative;
+}
+
 .baseline {
   font-size: 32px;
   color: var(--text-primary);
@@ -160,7 +164,7 @@
 }
 
 .module-description {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.6;
   margin: 0;
   color: rgba(255, 255, 255, 0.9);

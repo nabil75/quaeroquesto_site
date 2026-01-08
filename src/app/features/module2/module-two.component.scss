@@ -23,6 +23,10 @@
   }
 }
 
+.container-relative {
+  position: relative;
+}
+
 .bg-section-one {
   background: linear-gradient(135deg, var(--primary-gradient-start) 0%, var(--primary-gradient-end) 100%) !important;
   color: white;

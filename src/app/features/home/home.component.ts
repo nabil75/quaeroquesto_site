@@ -5,15 +5,19 @@ import { MatIconModule } from '@angular/material/icon';
 import { BreadcrumbComponent } from '../../shared/breadcrumb/breadcrumb.component';
 import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { RightLeftComponent } from "../../shared/right-left/right-left.component";
 
 
 @Component({
   selector: 'app-home',
-  imports: [MatToolbarModule, MatCardModule, MatIconModule, BreadcrumbComponent, RouterLink, CommonModule],
+  imports: [MatToolbarModule, MatCardModule, MatIconModule, BreadcrumbComponent, RouterLink, CommonModule, RightLeftComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
+
+  routeToLeft: string=""
+  routeToRight: string="/global_view"
 
   constructor() {}
 
@@ -23,7 +27,7 @@ export class HomeComponent {
     {
       id: 'global_view',
       title: 'Vue d\'ensemble',
-      description: 'Découvrez QuaeroQuesto et ses fonctionnalités',
+      description: 'Etat d\'avancement général du projet',
       icon: 'dashboard',
       color: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', // Violet   
       textDark: false,
@@ -32,7 +36,7 @@ export class HomeComponent {
     {
       id: 'module1',
       title: 'Questionner',
-      description: 'Création intuitive de questionnaires, assistée par IA',
+      description: 'Création intuitive de questionnaires',
       icon: 'question_answer',
       color: 'linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%)', // Bleu clair
       textDark: true,
@@ -59,7 +63,7 @@ export class HomeComponent {
     {
       id: 'module4',
       title: 'Mettre en forme',
-      description: 'Mise en forme et génération automatique de rapports',
+      description: 'Mise en forme et rapports automatiques',
       icon: 'draw',
       color: 'linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%)', // Bleu clair
       textDark: true,

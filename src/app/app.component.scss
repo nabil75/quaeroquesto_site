@@ -30,7 +30,7 @@ body > div {
 .icon-toolbox{
   background-color: #667eea;
   border: 1px solid gray;
-  font-size: 3vw!important;
+  font-size: 50px!important;
   width: auto;
   height: auto;
   padding: 20px;
@@ -44,15 +44,13 @@ body > div {
 
 .text-side-icon {
     display: none; /* Par défaut, masqué */
-    margin-top: 35px;
+    margin-top: 50px;
     font-size: 18px;
 }
 
 .icon-toolbox:hover + .text-side-icon{
   display: block;
 }
-
-
 
 .color1{
   background-color: #667eea;

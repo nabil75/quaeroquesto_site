@@ -1,7 +1,9 @@
 
 
 <app-breadcrumb [item_breadcrumb]="item_breadcrumb"></app-breadcrumb>
-  <div class="container py-4">
+  <div class="container py-4 container-relative">
+    <app-right-left [routeToLeft]="routeToLeft" [routeToRight]="routeToRight"></app-right-left>
+
     <div class="logo-header mb-4">
       <img
         src="assets/images/logo_quaeroquesto.png"

@@ -15,6 +15,10 @@
   }
 }
 
+.container-relative {
+  position: relative;
+}
+
 .vue-ensemble-layout {
   display: grid;
   grid-template-columns: 1fr 400px;
@@ -50,17 +54,6 @@
   border: 1px solid rgba(255, 255, 255, 0.5);
   height: 100%;
   min-height: 280px;
-}
-
-@media (max-width: 992px) {
-  .vue-ensemble-layout {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-  
-  .progress-integrated {
-    min-height: auto;
-  }
 }
 
 .bg-section-one {
@@ -139,6 +132,17 @@
     border-top-color: var(--primary-gradient-start);
     border-right-color: var(--primary-gradient-end);
     animation: spinAndComplete 2s linear forwards;
+  }
+}
+
+@media (max-width: 992px) {
+  .vue-ensemble-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .progress-integrated {
+    min-height: auto;
   }
 }
 

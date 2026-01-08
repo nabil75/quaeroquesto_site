@@ -1,62 +1,69 @@
 
 
 <app-breadcrumb [item_breadcrumb]="item_breadcrumb"></app-breadcrumb>
-  <div class="container py-4">
-    <div class="logo-header mb-4">
-      <img
-        src="assets/images/logo_quaeroquesto.png"
-        alt="QuaeroQuesto Logo"
-        class="logo-small"
-      />
-    </div>
 
-    <div id="titre" class="p-3 mb-4 bg-light rounded-3">
-      <div class="container-fluid py-3">
-        <div class="vue-ensemble-layout">
-          <div class="title-section">
-            <h1 class="display-5">Vue d'ensemble</h1>
-            <h4 class="col-md-12 description-vue-globale">
-              QuaeroQuesto est une application web de nouvelle génération dédiée à la conception, la diffusion et l'exploitation de questionnaires en ligne.
-              Conçue pour allier simplicité d'utilisation, puissance analytique et intégration avancée de l'intelligence artificielle, 
-              elle permet aux entreprises, chercheurs et institutions d'obtenir rapidement des insights fiables et exploitables.
-            </h4>
+    <div class="container py-4 container-relative">   
+          <app-right-left [routeToLeft]="routeToLeft" [routeToRight]="routeToRight"></app-right-left>
+          <div class="logo-header mb-4">
+            <img
+              src="assets/images/logo_quaeroquesto.png"
+              alt="QuaeroQuesto Logo"
+              class="logo-small"
+            />
           </div>
-          
-          <div class="progress-integrated">
-            <h2 class="progress-title">Etat d'avancement général des développements</h2>
-            <div class="progress">
-              65%
+
+          <div id="titre" class="p-3 mb-4 bg-light rounded-3">
+            <div class="container-fluid py-3">
+              <div class="vue-ensemble-layout">
+                <div class="title-section">
+                  <h1 class="display-5">Vue d'ensemble</h1>
+                  <h4 class="col-md-12 description-vue-globale">
+                    QuaeroQuesto est une application web de nouvelle génération dédiée à la conception, la diffusion et l'exploitation de questionnaires en ligne.
+                    Conçue pour allier simplicité d'utilisation, puissance analytique et intégration avancée de l'intelligence artificielle, 
+                    elle permet aux entreprises, chercheurs et institutions d'obtenir rapidement des insights fiables et exploitables.
+                  </h4>
+                </div>
+                
+                <div class="progress-integrated">
+                  <h2 class="progress-title">Etat d'avancement général des développements</h2>
+                  <div class="progress">
+                    65%
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
 
-    <div class="row align-items-md-stretch">
-      <div class="col-md-6">
-        <div class="h-100 p-5 rounded-3 bg-section-one">
-          <h2>Socle technologique </h2>
-            <ul>
-              <li>Backend : Python 3.13, FastAPI 0.115.6</li>
-              <li>Base de données : PostgreSQL 17.0 </li>
-              <li>Frontend : Angular 20.3.0, TypeScript 5.9.2, Angular Material 20.2.3 </li>
-              <li>Data & Analyse : Pandas, NumPy, Matplotlib, Seaborn. </li>
-              <li>Intelligence Artificielle : Intégration de modèles de langage et d'analyse sémantique (GPT-40, GPT-5, LLAMA3, MISTRAL7B).</li>
-              <li>Algorithmes maison de détection de biais, segmentation comportementale et rédaction automatisée.</li>
-            </ul>
-        </div>
+          <div class="row align-items-md-stretch">
+            <div class="col-md-6">
+              <div class="h-100 p-5 rounded-3 bg-section-one">
+                <h2>Socle technologique </h2>
+                  <ul>
+                    <li>Backend : Python 3.13, FastAPI 0.115.6</li>
+                    <li>Base de données : PostgreSQL 17.0 </li>
+                    <li>Frontend : Angular 20.3.0, TypeScript 5.9.2, Angular Material 20.2.3 </li>
+                    <li>Data & Analyse : Pandas, NumPy, Matplotlib, Seaborn. </li>
+                    <li>Intelligence Artificielle : Intégration de modèles de langage et d'analyse sémantique (GPT-40, GPT-5, LLAMA3, MISTRAL7B).</li>
+                    <li>Algorithmes maison de détection de biais, segmentation comportementale et rédaction automatisée.</li>
+                  </ul>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="h-100 p-5 rounded-3 bg-section-two">
+                <h2>Cas d'usage typiques</h2>
+                  <ul>
+                    <li>Enquêtes de satisfaction interne ou client.</li>
+                    <li>Études de marché et tests de concept.</li>
+                    <li>Évaluations RH et sondages d'engagement.</li>
+                    <li>Baromètres d'opinion, diagnostics organisationnels, etc.</li>
+                  </ul>
+              </div>
+            </div>
+          </div>
       </div>
-      <div class="col-md-6">
-        <div class="h-100 p-5 rounded-3 bg-section-two">
-          <h2>Cas d'usage typiques</h2>
-            <ul>
-              <li>Enquêtes de satisfaction interne ou client.</li>
-              <li>Études de marché et tests de concept.</li>
-              <li>Évaluations RH et sondages d'engagement.</li>
-              <li>Baromètres d'opinion, diagnostics organisationnels, etc.</li>
-            </ul>
-        </div>
-      </div>
-    </div>
-</div>
 
+
+  
+  
+
+  
