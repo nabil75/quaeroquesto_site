@@ -1,7 +1,11 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common'; // <-- obligatoire pour ngFor, ngStyle
 import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 import { BreadcrumbComponent } from "../../shared/breadcrumb/breadcrumb.component";
+import { MatIconModule } from "@angular/material/icon";
+import { NavigationHistoryService } from '../../shared/navigation-history.service';
+import { Router } from '@angular/router';
 
 interface Satellite {
   title: string;
@@ -14,7 +18,7 @@ interface Satellite {
   selector: 'app-community-program',
   templateUrl: './community-program.component.html',
   styleUrls: ['./community-program.component.scss'],
-  imports: [MatCardModule, CommonModule, BreadcrumbComponent],
+  imports: [MatCardModule, CommonModule, BreadcrumbComponent, MatIconModule, MatButtonModule],
   standalone: true,
   providers: []
 })
@@ -22,25 +26,17 @@ export class CommunityProgramComponent {
 
 @ViewChild('partnership', { static: true }) partnership!: ElementRef;
 
-// imageSize = window.innerWidth * 0.2; // 20vw
-// radius = this.imageSize / 2 + 65; // 150px d’écart minimum pour que les satellites ne soient pas cachés
 
-  satellites: Satellite[] = [
-    { title: 'Valeur pour les membres', description: 'En savoir plus' },
-    { title: 'Mode de contribution', description: 'Interventions légères et ponctuelles\nLiberté totale de participation' },
-    { title: 'Périmètre d’intervention', description: 'En savoir plus' },
-    { title: 'Mission principale', description: 'Apporter un regard expert et indépendant pour évaluer, challenger et prioriser les propositions fonctionnelles avant leur intégration dans l’outil.' },
-  ];
+    item_breadcrumb: string = "/community";
 
-  constructor() {
-    // Calcul des positions x/y pour chaque satellite
+  constructor(    
+    private navigationHistory: NavigationHistoryService,
+    private router: Router
+  ) {}
 
-    // this.satellites.forEach((satellite, i) => {
-    //   const angle = (i / this.satellites.length) * 2 * Math.PI;
-    //   satellite.x = this.radius * Math.cos(angle);
-    //   satellite.y = this.radius * Math.sin(angle);
-    // });
+  closeContact(): void {
+    const target = this.navigationHistory.getPreviousUrl();
+    this.router.navigateByUrl(target);
   }
-
 
 }

@@ -1,83 +1,129 @@
-div<app-breadcrumb ></app-breadcrumb>
+<app-breadcrumb [item_breadcrumb]="item_breadcrumb"></app-breadcrumb>
 <div class="container">
-
-<div class="quote-container container py-4">
-  <h2 class="chapter-title">
-    Contribuez à créer l’outil qui aidera les PME à mieux connaître leurs
-    clients
-  </h2>
-  <blockquote class="chapter-quote">
-    <span class="quote-mark">« </span>
-    Pour faire de cette application de questionnaires un vrai game changer, nous
-    avons besoin de vous. Ce projet est l’occasion de partager et de valoriser
-    votre expertise. Le cadre de collaboration est clair et flexible, conçu pour
-    s’adapter à vos disponibilités. Chaque contribution fera la différence.
-    <span class="quote-mark"> »</span>
-  </blockquote>
-</div>
-
-<div class="partnership-container">
-
-  <!-- Image centrale -->
-  <img
-    src="assets/images/partner.png"
-    alt="Puzzle Head"
-    class="central-image"
-  />
-
-  <div class="page">
-    <div class="grid">
-
-      <mat-card class="haut-gauche">
-        <mat-card-title class="bottom-color"><strong>Que vous demande-t-on ?</strong></mat-card-title>
-        <mat-card-content>
-          <ul>
-            <li>
-              Apporter un regard expert et indépendant pour évaluer, challenger et prioriser les propositions fonctionnelles avant leur intégration dans l’outil.
-            </li>
-          </ul>
-            
-        </mat-card-content>
-      </mat-card>
-
-      <mat-card class="haut-droit">
-        <mat-card-title class="bottom-color"><strong>Valeur pour vous en tant que membre du comité consultatif</strong></mat-card-title>
-        <mat-card-content>
-            <ul>
-              <li>Mise en avant de votre expertise relation client dans un projet bénéficiant demain d'une forte visibilité</li>
-              <li>Influence directe sur un produit utilisé demain par des PME de tous secteurs</li>
-              <li>Positionnement en tant que référent métier sur des usages data & IA appliqués au marketing et à la connaissance client</li> 
-            </ul>
-        </mat-card-content>
-      </mat-card>
-
-      <mat-card class="bas-gauche">
-        <mat-card-title><strong>Périmètre d’intervention</strong></mat-card-title>
-        <mat-card-content>
-            <ul>
-              <li>Validation des concepts mis en oeuvre (satisfaction, fidélité, adoption, churn, perception ...)</li>
-              <li>Aide à la définition des indicateurs clés orientés relation client</li>
-              <li>Avis sur la manière dont l’IA peut-être mise à profit (recommandations, alertes, interprétation des résultats)</li> 
-            </ul>
-        </mat-card-content>
-      </mat-card>
-
-
-      <mat-card class="bas-droit">
-        <mat-card-title><strong>Mode de contribution</strong></mat-card-title>
-        <mat-card-content>
-          <ul>
-            <li>Interventions légères et ponctuelles (échanges à distance principalement)</li>
-            <li>Feedbacks qualitatifs sur des propositions concrètes (pas de production opérationnelle)</li>
-            <li>Liberté totale de participation (selon vos souhaits et disponibilités)</li>
-          </ul>
-        </mat-card-content>
-      </mat-card>
-
+  <mat-card class="contact-card">
+    <div class="contact-header">
+      <button
+        mat-icon-button
+        (click)="closeContact()"
+        aria-label="Fermer la fiche contact"
+      >
+        <mat-icon>close</mat-icon>
+      </button>
     </div>
-  </div>
-</div>
 
+    <mat-card-content>
+      <div class="quote-container container py-4">
+        <h2 class="chapter-title">
+          Contribuez à créer l’outil qui aidera les PME à mieux connaître leurs
+          clients
+        </h2>
+        <blockquote class="chapter-quote">
+          <span class="quote-mark">« </span>
+          Pour faire de cette application de questionnaires un vrai game
+          changer, nous avons besoin de vous. Ce projet est l’occasion de
+          partager et de valoriser votre expertise. Le cadre de collaboration
+          est clair et flexible, conçu pour s’adapter à vos disponibilités.
+          Chaque contribution fera la différence.
+          <span class="quote-mark"> »</span>
+        </blockquote>
+      </div>
 
+      <div class="partnership-container">
+        <!-- Image centrale -->
+        <img
+          src="assets/images/partner.png"
+          alt="Puzzle Head"
+          class="central-image"
+        />
 
+        <div class="page">
+          <div class="grid">
+            <mat-card class="haut-gauche">
+              <mat-card-title class="bottom-color"
+                ><strong>Que vous demande-t-on ?</strong></mat-card-title
+              >
+              <mat-card-content>
+                <ul>
+                  <li>
+                    Apporter un regard expert et indépendant pour évaluer,
+                    challenger et prioriser les propositions fonctionnelles
+                    avant leur intégration dans l’outil.
+                  </li>
+                </ul>
+              </mat-card-content>
+            </mat-card>
+
+            <mat-card class="haut-droit">
+              <mat-card-title class="bottom-color"
+                ><strong
+                  >Valeur pour vous en tant que membre du comité
+                  consultatif</strong
+                ></mat-card-title
+              >
+              <mat-card-content>
+                <ul>
+                  <li>
+                    Mise en avant de votre expertise relation client dans un
+                    projet bénéficiant demain d'une forte visibilité
+                  </li>
+                  <li>
+                    Influence directe sur un produit utilisé demain par des PME
+                    de tous secteurs
+                  </li>
+                  <li>
+                    Positionnement en tant que référent métier sur des usages
+                    data & IA appliqués au marketing et à la connaissance client
+                  </li>
+                </ul>
+              </mat-card-content>
+            </mat-card>
+
+            <mat-card class="bas-gauche">
+              <mat-card-title
+                ><strong>Périmètre d’intervention</strong></mat-card-title
+              >
+              <mat-card-content>
+                <ul>
+                  <li>
+                    Validation des concepts mis en oeuvre (satisfaction,
+                    fidélité, adoption, churn, perception ...)
+                  </li>
+                  <li>
+                    Aide à la définition des indicateurs clés orientés relation
+                    client
+                  </li>
+                  <li>
+                    Avis sur la manière dont l’IA peut-être mise à profit
+                    (recommandations, alertes, interprétation des résultats)
+                  </li>
+                </ul>
+              </mat-card-content>
+            </mat-card>
+
+            <mat-card class="bas-droit">
+              <mat-card-title
+                ><strong>Mode de contribution</strong></mat-card-title
+              >
+              <mat-card-content>
+                <ul>
+                  <li>
+                    Interventions légères et ponctuelles (échanges à distance
+                    principalement)
+                  </li>
+                  <li>
+                    Feedbacks qualitatifs sur des propositions concrètes (pas de
+                    production opérationnelle)
+                  </li>
+                  <li>
+                    Liberté totale de participation (selon vos souhaits et
+                    disponibilités)
+                  </li>
+                </ul>
+              </mat-card-content>
+            </mat-card>
+          </div>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
 </div>

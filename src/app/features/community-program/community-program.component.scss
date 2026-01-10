@@ -30,6 +30,17 @@
   }
 }
 
+.contact-card {
+  padding: 1rem 1.5rem 1.5rem;
+  background-color: transparent;
+}
+
+.contact-header {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
 .partnership-container {
   position: relative;
   width: 100%;
