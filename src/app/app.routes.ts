@@ -7,6 +7,7 @@ import { ModuleTwoComponent } from './features/module2/module-two.component';
 import { ModuleThreeComponent } from './features/module3/module-three.component';
 import { ModuleFourComponent } from './features/module4/module-four.component';
 import { ModuleFiveComponent } from './features/module5/module-five.component';
+import { CommunityProgramComponent } from './features/community-program/community-program.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent, title: 'Accueil' },
@@ -17,6 +18,8 @@ export const routes: Routes = [
   { path: 'module3', component: ModuleThreeComponent, title: 'Exploiter' },
   { path: 'module4', component: ModuleFourComponent, title: 'Mettre en forme' },
   { path: 'module5', component: ModuleFiveComponent, title: 'Partager'},
+  { path: 'community', component: CommunityProgramComponent, title: 'Communauté' },
   { path: 'contact', component: ContactComponent, title: 'Contact' },
+  { path: 'community', component: CommunityProgramComponent, title: 'Community program' },
   { path: '**', redirectTo: '' }
 ];

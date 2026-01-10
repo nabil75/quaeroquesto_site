@@ -1,0 +1,106 @@
+
+.quote-container {
+  text-align: center;
+  max-width: auto;
+  margin-top: 2%;
+  .chapter-title {
+    font-family: 'Merriweather', serif;
+    font-size: clamp(30px, 1.5vw, 2vw);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #1976d2;
+  }
+
+  .chapter-quote {
+    font-style: italic;
+    font-size: clamp(15px, 1vw, 1.5vw);
+    line-height: 1.6;
+    color: #555;
+    margin-top: 1rem;
+    position: relative;
+    display: inline-block;
+    text-align: justify;
+
+    // Guillemets décoratifs
+  .quote-mark {
+      font-size: clamp(15px, 1vw, 1.5vw);
+      color: #1976d2;
+      vertical-align: top;
+  }
+  }
+}
+
+.partnership-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.central-image {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  z-index: 5;
+  position: absolute;
+  opacity: 1;
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+mat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  border-radius: 10px;
+  padding: 25px;
+}
+
+mat-card-title{
+  border-bottom: 1px solid black;
+  margin-bottom: 10px;
+}
+.bottom-color{
+  border-bottom: 1px solid white;
+}
+
+.haut-gauche{
+  background-color: #49167bac;
+  color: white;
+}
+
+.haut-droit{
+  background-color: #7a8fe2;
+  color: white;
+}
+
+.bas-gauche{
+  background-color: #daeede;
+}
+
+.bas-droit{
+  background-color: #d7f2f4;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .central-image {
+    position: static;
+    margin: 20px 0;
+  }
+}

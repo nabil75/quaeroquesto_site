@@ -6,6 +6,9 @@ body {
   background-attachment: fixed;
 }
 
+.card{
+  z-index: 999;
+}
 
 body > div {
   position: relative;
@@ -30,11 +33,11 @@ body > div {
 .icon-toolbox{
   background-color: #667eea;
   border: 1px solid gray;
-  font-size: 50px!important;
-  width: auto;
-  height: auto;
-  padding: 20px;
-  line-height: 100px;
+  font-size: 48px!important;
+  width: 72px;
+  height: 72px;
+  margin-bottom: 2px;;
+  line-height: 72px;
   cursor: pointer;
   border-radius: 0 5px 5px 0;
   text-align: center;
@@ -44,7 +47,7 @@ body > div {
 
 .text-side-icon {
     display: none; /* Par défaut, masqué */
-    margin-top: 50px;
+    margin-top: 25px;
     font-size: 18px;
 }
 

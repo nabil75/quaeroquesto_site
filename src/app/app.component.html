@@ -4,13 +4,19 @@
     <router-outlet></router-outlet>
   </div>
   <mat-card>
-    <mat-card-content>
+    <mat-card-content class="card">
       <div class="toolbox">
         <ul>
           <li class="li-toolbox">
             <div class=" d-flex justify-content-start">
               <mat-icon class="icon-toolbox color1" [routerLink]="['/contact']">contact_mail</mat-icon>
               <span class="text-side-icon">Cliquez ici pour voir mes coordonnées</span>
+            </div>
+          </li>
+          <li class="li-toolbox">
+            <div class=" d-flex justify-content-start">
+              <mat-icon class="icon-toolbox color1" [routerLink]="['/community']">people</mat-icon>
+              <span class="text-side-icon">Cliquez ici pour nous rejoindre</span>
             </div>
           </li>
         </ul>
