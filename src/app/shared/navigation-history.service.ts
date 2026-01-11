@@ -1,20 +1,20 @@
 import { Injectable } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
-import { filter } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class NavigationHistoryService {
   // Dernière URL visitée qui n'est pas la page de contact
-  private lastNonContactUrl: string = '/home';
-
+  private lastNonContactUrl: string = '';
   
 
   constructor() {
-
+    const valeurStockee = sessionStorage.getItem('previousUrl');
+    if (valeurStockee) {
+      this.lastNonContactUrl = valeurStockee;
+    }
   }
-
+  
   getPreviousUrl(): string {
     return this.lastNonContactUrl;
   }
@@ -22,5 +22,6 @@ export class NavigationHistoryService {
   setPreviousUrl(lastUrl: string){
     this.lastNonContactUrl = lastUrl;
   }
+
 }
 

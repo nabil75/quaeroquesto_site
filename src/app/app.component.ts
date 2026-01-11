@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
@@ -6,6 +6,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatCard, MatCardContent } from "@angular/material/card";
 import { RouterLink } from '@angular/router';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { NavigationHistoryService } from './shared/navigation-history.service';
 
 
 @Component({
@@ -16,4 +17,17 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 })
 export class AppComponent {
   title = 'quaeroquesto';
+
+  constructor(private navigationHistory: NavigationHistoryService) {}
+
+  
+  @HostListener('window:beforeunload')
+  sauvegarderEtat() {
+    const valeur = this.navigationHistory.getPreviousUrl();
+    if (valeur) {
+      sessionStorage.setItem('previousUrl', valeur);
+    }
+  }
+
+
 }

@@ -24,7 +24,7 @@ interface Satellite {
 })
 export class CommunityProgramComponent {
 
-@ViewChild('partnership', { static: true }) partnership!: ElementRef;
+
 
 
     item_breadcrumb: string = "/community";
@@ -33,6 +33,8 @@ export class CommunityProgramComponent {
     private navigationHistory: NavigationHistoryService,
     private router: Router
   ) {}
+
+
 
   closeContact(): void {
     const target = this.navigationHistory.getPreviousUrl();
