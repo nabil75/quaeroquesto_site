@@ -1,7 +1,8 @@
 @if(routeToLeft){
   <mat-icon
     class="icon left"
-    [routerLink]="[routeToLeft]">
+    [routerLink]="[routeToLeft]"
+    (click)="getUrl(routeToLeft)">
     arrow_left
   </mat-icon>
   }
@@ -9,7 +10,8 @@
 @if(routeToRight){
   <mat-icon
     class="icon right"
-    [routerLink]="[routeToRight]">
+    [routerLink]="[routeToRight]"
+    (click)="getUrl(routeToRight)">
     arrow_right
   </mat-icon>
 }

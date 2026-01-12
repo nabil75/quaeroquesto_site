@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MatIcon } from "@angular/material/icon";
 import { RouterLink } from '@angular/router';
+import { NavigationHistoryService} from './../navigation-history.service'
 
 @Component({
   selector: 'app-right-left',
@@ -13,10 +14,14 @@ export class RightLeftComponent implements OnInit {
   @Input() routeToRight: string | undefined;
   @Input() routeToLeft: string | undefined;
   
-  constructor() { }
+  constructor( private navigationHistory : NavigationHistoryService) { }
 
   ngOnInit() {
     
+  }
+
+  getUrl(url : any){
+    this.navigationHistory.setPreviousUrl(url)
   }
 
 }
